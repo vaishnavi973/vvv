@@ -1,0 +1,1076 @@
+<header>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Vaishnavi R</h1>
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#blogs">Writing</a></li>
+        <li><a href="#contact">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- CSS Styling for the header -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      box-sizing: border-box;
+    }
+  
+    .navbar {
+      background-color: #3498db;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .logo h1 {
+      color: #fff;
+      margin: 0;
+      font-size: 1.5rem;
+    }
+  
+    .nav-links {
+      list-style: none;
+      display: flex;
+      margin-right: 20px;
+      padding: 0;
+    }
+  
+    .nav-links li {
+      margin-right: 20px;
+    }
+  
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  
+    .nav-links a:hover {
+      color: #f1c40f;
+    }
+  
+    /* Mobile Menu */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+  
+    .bar {
+      height: 3px;
+      width: 25px;
+      background-color: #fff;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+  
+    /* Media Queries for responsiveness */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #3498db;
+        width: 100%;
+        text-align: center;
+      }
+  
+      .nav-links li {
+        margin: 20px 0;
+      }
+  
+      .menu-toggle {
+        display: flex;
+      }
+  
+      .menu-toggle.active + .nav-links {
+        display: flex;
+      }
+    }
+  
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+  
+  <!-- JavaScript for mobile menu toggle -->
+  <script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+  
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+  </script>
+
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2 class="hero-title">Vaishnavi R</h2>
+      <p class="hero-subtitle">Electrifying IT & Content Creation</p>
+      <p class="hero-description"> 
+        I'm a final-year B.E-EEE student transitioning into IT with a passion for <strong>creative problem-solving</strong>, content creation, and storytelling. <br><br> 
+        Let's explore my journey from circuits to code and discover how I'm lighting up the digital landscape.
+      </p>
+      <div class="hero-buttons">
+        <a href="mailto:rvaishnavivaishu7@gmail.com" class="btn-primary" aria-label="Email me"><i class="fas fa-envelope"></i> Get in Touch</a>
+        <a href="https://wa.me/919361057612" class="btn-secondary" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+        <a href="https://drive.google.com/file/d/1nO8S6xz_QBHlgubxuF0vBpm2EteObNtC/view?usp=sharing" class="btn-primary" download aria-label="Download my resume"><i class="fas fa-file-download"></i> Download My Resume</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CSS Styling for Hero Section -->
+  <style>
+    .hero {
+      background-color: #f9f9f9;
+      padding: 100px 20px;
+      text-align: center;
+      background-image: url('your-high-quality-background-image.jpg'); /* Add your background image */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      background-attachment: fixed; /* Optional: Makes the background image fixed */
+      alt: "A descriptive alt text for the background image"; /* Add alt text for accessibility */
+    }
+  
+    /* Dark overlay for better text readability */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+      z-index: 1;
+    }
+  
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.85); /* White background with opacity */
+      border-radius: 8px;
+    }
+  
+    .hero-title {
+      font-size: 2.8rem;
+      color: #3498db;
+      margin-bottom: 20px;
+    }
+  
+    .hero-subtitle {
+      font-size: 1.8rem;
+      color: #f1c40f;
+      margin-bottom: 10px;
+    }
+  
+    .hero-description {
+      font-size: 1.2rem;
+      color: #333;
+      line-height: 1.4;
+      margin-bottom: 30px; /* Adjusted margin-bottom */
+      font-family: 'Open Sans', sans-serif; /* Ensure consistent font */
+    }
+  
+    .highlight-text {
+      font-weight: bold;
+      color: #3498db; /* Matching color */
+      font-size: 1.2rem; /* Consistent size */
+      font-style: normal; /* Normal style to match */
+      text-shadow: none; /* No shadow to match the rest of the text */
+    }
+  
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+  
+    .btn-primary, .btn-secondary {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #fff;
+      transition: background-color 0.3s;
+      display: inline-flex;
+      align-items: center;
+    }
+  
+    .btn-primary {
+      background-color: #2ecc71; /* Green */
+    }
+  
+    .btn-secondary {
+      background-color: #e74c3c; /* Red */
+    }
+  
+    .btn-primary:hover {
+      background-color: #27ae60;
+    }
+  
+    .btn-secondary:hover {
+      background-color: #c0392b;
+    }
+  
+    .btn-primary i, .btn-secondary i {
+      margin-right: 8px;
+    }
+  
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+  
+      .hero-subtitle {
+        font-size: 1.5rem;
+      }
+  
+      .hero-description {
+        font-size: 1rem;
+      }
+  
+      .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+  
+  <!-- Font Awesome Icons for Buttons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+  
+ <section id="about" class="about">
+    <div class="about-container split-screen">
+      <div class="about-image">
+        <img src="WhatsApp Image 2024-09-17 at 12.16.26_4695e1a5.jpg" alt="Vaishnavi R" class="about-img"> <!-- Profile photo -->
+      </div>
+      <div class="about-text">
+        <h2 class="about-title">The Spark Behind My Story</h2>
+        <p class="about-summary">Transforming my engineering expertise into innovative IT solutions with a creative touch.</p>
+        <p class="about-description">
+          As a final-year B.E-EEE student at National Engineering College, I've discovered that my true spark lies at the intersection of technology and creative expression. With a CGPA of 7.23, I've consistently pushed myself to excel academically while exploring my passions.
+          <br><br>
+          When I'm not coding or writing, you can find me:
+          <ol>
+            <li>Solving Rubik's Cubes in under 3 minutes</li>
+            <li>Crafting compelling stories on Medium</li>
+            <li>Engaging with my 2000+ followers on LinkedIn</li>
+          </ol>
+          Recognized by LinkedIn as a Top Creative Problem-Solving Voice, I'm eager to leverage my skills in content creation, communication, and problem-solving to drive innovation in the IT industry.
+          <br><br>
+          My Mantra: <strong>"Learn, Adapt, Create, Repeat."</strong>
+        </p>
+        <a href="https://www.linkedin.com/in/vaishnavi-r-aa9970238" class="btn-cta" target="_blank">
+            <i class="fab fa-linkedin"></i> Connect on LinkedIn
+          </a>
+           <!-- Call-to-Action button -->
+      </div>
+    </div>
+  </section> <!-- CSS Styling for Split-Screen Design -->
+  <style>
+    .about {
+      background-color: #f5f5f5;
+      padding: 60px 20px;
+      text-align: center;
+    }
+  
+    .about-container.split-screen {
+      display: flex;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .about-image {
+      flex: 1;
+      padding-right: 20px;
+    }
+  
+    .about-img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border: 5px solid #3498db; /* Border color matching the theme */
+    }
+  
+    .about-text {
+      flex: 2;
+      padding-left: 20px;
+      text-align: left;
+    }
+  
+    .about-title {
+      font-size: 2.5rem;
+      color: #3498db;
+      margin-bottom: 15px;
+    }
+  
+    .about-summary {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+  
+    .about-description {
+      font-size: 1.1rem;
+      color: #333;
+      line-height: 1.6;
+      text-align: justify;
+    }
+  
+    .about-description ol {
+      list-style: decimal;
+      padding-left: 20px;
+    }
+  
+    .about-description strong {
+      font-weight: bold;
+      color: #2ecc71; /* Highlight the mantra */
+    }
+  
+    .btn-cta {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  
+    .btn-cta:hover {
+      background-color: #2980b9;
+    }
+  
+    @media (max-width: 768px) {
+      .about-container.split-screen {
+        flex-direction: column;
+        text-align: center;
+      }
+  
+      .about-image, .about-text {
+        padding: 0;
+      }
+  
+      .about-title {
+        font-size: 2rem;
+      }
+  
+      .about-summary {
+        font-size: 1rem;
+      }
+  
+      .about-description {
+        font-size: 1rem;
+      }
+    }
+  </style>
+
+
+
+<section id="education" class="education">
+    <div class="education-container">
+      <h2 class="education-title">Education</h2>
+      <ul class="education-list">
+        <li class="education-item">
+          <h3 class="education-institution">National Engineering College</h3>
+          <p class="education-details">B.E. in Electrical and Electronics Engineering</p>
+          <p class="education-details">CGPA: 7.23</p>
+          <p class="education-details">Completed coursework in Electrical and Electronics Engineering</p>
+
+        </li>
+        <li class="education-item">
+          <h3 class="education-institution">Additional Certifications</h3>
+          <ul class="certification-list">
+            <li class="certification-item">Technical English for Engineers - NPTEL</li>
+            <li class="certification-item">Linguaskill Business Examination - Cambridge University</li>
+            <li class="certification-item">Responsive Web Design Developer - FreeCodeCamp</li>
+            <!-- Add more certifications as needed -->
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+  
+  <!-- CSS Styling for Education Section -->
+  <style>
+    .education {
+      background-color: #ffffff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+  
+    .education-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  
+    .education-title {
+      font-size: 2.5rem;
+      color: #3498db;
+      margin-bottom: 30px;
+    }
+  
+    .education-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .education-item {
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+  
+    .education-institution {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+  
+    .education-details {
+      font-size: 1.1rem;
+      color: #555;
+      margin: 5px 0;
+    }
+  
+    .certification-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .certification-item {
+      font-size: 1.1rem;
+      color: #555;
+    }
+  
+    @media (max-width: 768px) {
+      .education-title {
+        font-size: 2rem;
+      }
+  
+      .education-item {
+        padding: 15px;
+      }
+  
+      .education-institution {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+  
+ <section id="skills" class="skills">
+    <div class="skills-container">
+      <h2 class="skills-title">Skills</h2>
+      <div class="skills-content">
+        <div class="skills-category">
+          <h3 class="skills-category-title">Technical Skills</h3>
+          <ul class="skills-list">
+            <li class="skills-item">HTML </li>
+            <li class="skills-item">CSS</li>
+            <li class="skills-item">C Programming</li>
+            <li class="skills-item">Content Creation</li>
+            <!-- Add more technical skills as needed -->
+          </ul>
+        </div>
+        <div class="skills-category">
+          <h3 class="skills-category-title">Soft Skills</h3>
+          <ul class="skills-list">
+            <li class="skills-item">Creative Problem-Solving</li>
+            <li class="skills-item">Communication</li>
+            <li class="skills-item">Teamwork</li>
+            <li class="skills-item">Leadership</li>
+            <li class="skills-item">Time Management</li>
+            <!-- Add more soft skills as needed -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CSS Styling for Skills Section -->
+  <style>
+    .skills {
+      background-color: #f9f9f9;
+      padding: 60px 20px;
+      text-align: center;
+    }
+  
+    .skills-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .skills-title {
+      font-size: 2.5rem;
+      color: #3498db;
+      margin-bottom: 30px;
+    }
+  
+    .skills-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .skills-category {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+  
+    .skills-category-title {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
+  
+    .skills-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .skills-item {
+      font-size: 1.1rem;
+      color: #555;
+      margin: 5px 0;
+    }
+  
+    @media (max-width: 768px) {
+      .skills-content {
+        flex-direction: column;
+      }
+  
+      .skills-title {
+        font-size: 2rem;
+      }
+  
+      .skills-category {
+        padding: 15px;
+      }
+  
+      .skills-category-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style> 
+
+  
+  <section id="experience" class="experience">
+    <div class="experience-container">
+      <h2 class="experience-title">Experience & Achievements</h2>
+      <div class="experience-item">
+        <h3 class="experience-role">Content Writer Intern at TOSPACE</h3>
+        <p class="experience-details">
+          Dynamic contributor to TOSPACE, recognized by Startup India and Startup TN. Demonstrated strong communication skills with the technical content team to enhance solutions. Authored a blog on integrated circuits:
+          <a href="https://medium.com/@rvaishnavivaishu7/integrated-circuits-ics-b59b273853c7" target="_blank">Read the Blog</a>.
+          I am eager to leverage my experience for effective communication, faster resolutions, and customer satisfaction.
+        </p>
+      </div>
+      <div class="experience-item">
+        <h3 class="experience-role">Radio Jockey at Voice of NEC</h3>
+        <p class="experience-details">
+          As an RJ in the college club "Voice of NEC," I hosted shows in Tamil and English, covering topics like self-love, not comparing oneself with others, and interesting facts about human eyes.
+        </p>
+        <div class="media-items">
+          <div class="media-item">
+            <h4>Show on Self Love</h4>
+            <audio controls>
+              <source src="self love.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="media-item">
+            <h4>Show on Don't Compare Yourself</h4>
+            <audio controls>
+              <source src="dont compare yourself with others.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="media-item">
+            <h4>Show on Interesting Facts About Human Eyes</h4>
+            <audio controls>
+              <source src="intresting facts about eyes.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+      <div class="experience-item">
+        <h3 class="experience-role">Secretary of Eco Club</h3>
+        <p class="experience-details">
+          As the Secretary of the Eco Club in college, I organized various competitions and events, fostering environmental awareness and engagement among students.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CSS Styling for Experience Section -->
+  <style>
+    .experience {
+      background-color: #e9ecef;
+      padding: 60px 20px;
+      text-align: center;
+    }
+  
+    .experience-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  
+    .experience-title {
+      font-size: 2.5rem;
+      color: #3498db;
+      margin-bottom: 30px;
+    }
+  
+    .experience-item {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+  
+    .experience-role {
+      font-size: 1.8rem;
+      color: #2ecc71;
+      margin-bottom: 10px;
+    }
+  
+    .experience-details {
+      font-size: 1.2rem;
+      color: #333;
+      line-height: 1.6;
+      text-align: left;
+    }
+  
+    .experience-details a {
+      color: #3498db;
+      text-decoration: none;
+    }
+  
+    .experience-details a:hover {
+      text-decoration: underline;
+    }
+  
+    .media-items {
+      margin-top: 20px;
+    }
+  
+    .media-item {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+  
+    .media-item h4 {
+      font-size: 1.3rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+  
+    audio {
+      width: 100%;
+      max-width: 600px;
+    }
+  
+    @media (max-width: 768px) {
+      .experience-title {
+        font-size: 2rem;
+      }
+  
+      .experience-details {
+        font-size: 1rem;
+      }
+    }
+  </style>
+   
+  
+   <section id="achievements" class="achievements">
+    <div class="achievements-container">
+      <h2 class="achievements-title">Achievements</h2>
+      <div class="achievement-item">
+        <h3 class="achievement-title">1st Prize in Debate and Podcast Competition</h3>
+        <p class="achievement-details">
+          Awarded 1st Prize in the Debate and Podcast Competition organized by the Rotaract Club of National Engineering College.
+          <a href="d&b.pdf" class="btn-see-certificate" target="_blank">View Certificate</a>
+        </p>
+      </div>
+      <div class="achievement-item">
+        <h3 class="achievement-title">Certificate of Appreciation - Literary Club</h3>
+        <p class="achievement-details">
+          Received a Certificate of Appreciation for the best performance in the Literary Club of National Engineering College for the academic year 2022-2023.
+          <a href="jeba mam.pdf" class="btn-see-certificate" target="_blank">View Certificate</a>
+        </p>
+      </div>
+      <div class="achievement-item">
+        <h3 class="achievement-title">2nd Prize in Paper and Poster Presentation</h3>
+        <p class="achievement-details">
+          Awarded 2nd Prize in Paper and Poster Presentation at the National Level Technical Symposium 'THRONIX 23' at St. Xavier's Catholic College of Engineering.
+          <a href="pp competition.pdf" class="btn-see-certificate" target="_blank">View Certificate</a>
+        </p>
+      </div>
+      <div class="achievement-item">
+        <h3 class="achievement-title">Linguaskill Business Examination - Cambridge University</h3>
+        <p class="achievement-details">
+          Achieved Grade B1 in the Linguaskill Business Examination from Cambridge University.
+          <a href="Linguaskill.pdf" class="btn-see-certificate" target="_blank">View Certificate</a>
+        </p>
+      </div>
+      <div class="achievement-item">
+        <h3 class="achievement-title">Responsive Web Design Developer Certificate</h3>
+        <p class="achievement-details">
+          Earned a certificate in Responsive Web Design Development from FreeCodeCamp.
+          <a href="https://www.freecodecamp.org/certification/fccb0c61d6b-041f-4bf9-b504-3ff5cc75c1e0/responsive-web-design" class="btn-see-certificate" target="_blank">View Certificate</a>
+        </p>
+      </div>
+      <div class="achievement-item">
+        <h3 class="achievement-title">Top Creative Problem-Solving Voice - LinkedIn</h3>
+        <p class="achievement-details">
+          Recognized by LinkedIn as a Top Creative Problem-Solving Voice for exceptional problem-solving skills and innovative thinking.
+          <a href="https://www.linkedin.com/posts/vaishnavi-r-aa9970238_creativeproblemsolver-linkedinrecognition-activity-7168978875555794945-2Ucn?utm_source=share&utm_medium=member_desktop" class="btn-see-certificate" target="_blank">View Badge</a>
+        </p>
+      </div>
+      <div class="achievement-item">
+        <h3 class="achievement-title">Participation in Regional Pre-finals of ICT Academy Youth Talk - Tamil Nadu</h3>
+        <p class="achievement-details">
+          Participated in the Regional Pre-finals of ICT Academy Youth Talk in Tamil Nadu, showcasing skills in public speaking and thought leadership.
+          <a href="youthtalk.pdf" class="btn-see-certificate" target="_blank">View Certificate</a>
+        </p>
+      </div>
+      
+    </div>
+  </section>
+  
+  <!-- CSS Styling for Achievements Section -->
+  <style>
+    .achievements {
+      background-color: #ffffff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+  
+    .achievements-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  
+    .achievements-title {
+      font-size: 2.5rem;
+      color: #3498db;
+      margin-bottom: 30px;
+    }
+  
+    .achievement-item {
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+  
+    .achievement-title {
+      font-size: 1.8rem;
+      color: #2ecc71;
+      margin-bottom: 10px;
+    }
+  
+    .achievement-details {
+      font-size: 1.2rem;
+      color: #333;
+      line-height: 1.6;
+    }
+  
+    .btn-see-certificate {
+      display: inline-block;
+      color: #3498db;
+      text-decoration: none;
+      margin-top: 10px;
+      font-size: 1rem;
+      border: 1px solid #3498db;
+      border-radius: 5px;
+      padding: 5px 10px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  
+    .btn-see-certificate:hover {
+      background-color: #3498db;
+      color: #fff;
+    }
+  
+    @media (max-width: 768px) {
+      .achievements-title {
+        font-size: 2rem;
+      }
+  
+      .achievement-details {
+        font-size: 1rem;
+      }
+    }
+  </style>
+  
+  <section id="blogs" class="blogs">
+    <div class="blogs-container">
+      <h2 class="blogs-title">Blogs</h2>
+      <div class="blog-item">
+        <h3 class="blog-title">Story of Resistors</h3>
+        <p class="blog-summary">
+          An in-depth exploration of resistors, their types, and their applications in electronic circuits.
+        </p>
+        <a href="https://rvaishnavivaishu7.medium.com/story-of-resistor-6c4df1d0641b" target="_blank" class="btn-read-more">Read the Blog</a>
+      </div>
+      <div class="blog-item">
+        <h3 class="blog-title">Story of Capacitors</h3>
+        <p class="blog-summary">
+          A comprehensive guide on capacitors, their functionality, and their role in electronic devices.
+        </p>
+        <a href="https://rvaishnavivaishu7.medium.com/story-of-capacitor-766e6410fd70" target="_blank" class="btn-read-more">Read the Blog</a>
+      </div>
+      <div class="blog-item">
+        <h3 class="blog-title">Completion of Teenage</h3>
+        <p class="blog-summary">
+          Reflecting on the experiences and learnings from the teenage years, exploring personal growth and challenges.
+        </p>
+        <a href="https://rvaishnavivaishu7.medium.com/completion-of-teenage-a069cd856488" target="_blank" class="btn-read-more">Read the Blog</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CSS Styling for Blogs Section -->
+  <style>
+    .blogs {
+      background-color: #f8f9fa;
+      padding: 60px 20px;
+      text-align: center;
+    }
+  
+    .blogs-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  
+    .blogs-title {
+      font-size: 2.5rem;
+      color: #3498db;
+      margin-bottom: 30px;
+    }
+  
+    .blog-item {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+  
+    .blog-title {
+      font-size: 1.8rem;
+      color: #2ecc71;
+      margin-bottom: 10px;
+    }
+  
+    .blog-summary {
+      font-size: 1.2rem;
+      color: #333;
+      line-height: 1.6;
+    }
+  
+    .btn-read-more {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  
+    .btn-read-more:hover {
+      background-color: #2980b9;
+    }
+  
+    @media (max-width: 768px) {
+      .blogs-title {
+        font-size: 2rem;
+      }
+  
+      .blog-summary {
+        font-size: 1rem;
+      }
+    }
+  </style>
+   
+   <section id="contact" class="contact">
+  <div class="contact-container">
+    <h2 class="contact-title">Get in Touch</h2>
+    <p class="contact-description">
+      I’d love to hear from you! Whether you have a question, feedback, or just want to connect, feel free to reach out to me through the form below or through my LinkedIn profile.
+    </p>
+    <!-- Formspree form -->
+    <form action="https://formspree.io/f/xldrkkbq" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <!-- Hidden input to disable CAPTCHA if needed -->
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+    <p class="contact-socials">
+      You can also connect with me on <a href="https://www.linkedin.com/in/vaishnavi-r-aa9970238" target="_blank">LinkedIn</a>.
+    </p>
+  </div>
+</section>
+
+<!-- CSS Styling for Contact Section -->
+<style>
+  .contact {
+    background-color: #e9ecef;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .contact-title {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 20px;
+  }
+
+  .contact-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+  }
+
+  .btn-submit {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn-submit:hover {
+    background-color: #2980b9;
+  }
+
+  .contact-socials {
+    margin-top: 20px;
+    font-size: 1.1rem;
+  }
+
+  .contact-socials a {
+    color: #3498db;
+    text-decoration: none;
+  }
+
+  .contact-socials a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .contact-title {
+      font-size: 2rem;
+    }
+
+    .contact-description {
+      font-size: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      font-size: 0.9rem;
+    }
+  }
+</style>
